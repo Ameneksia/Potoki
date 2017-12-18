@@ -2,15 +2,29 @@
 <!-- ?xml version="1.0" encoding="utf-8"? -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fon"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
-    <ImageView
-        android:id="@+id/image"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <SeekBar
+        android:id="@+id/fontSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:max="80"
+        android:progress="8" />
+
+    <EditText
+        android:id="@+id/Ed1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="50dp"
-        />
+        android:layout_below="@+id/fontSize" />
+
 
 
 </RelativeLayout>
