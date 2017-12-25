@@ -8,20 +8,17 @@ import android.graphics.Canvas;
 
 import java.util.ArrayList;
 
-/**
- * Created by Анастасия on 22.12.2017.
- */
 
 public class GameView extends View {
 
-    private ArrayList<Charactor> objects = new ArrayList<>();
+    private ArrayList<Peron> objects = new ArrayList<>();
 
 
     public GameView(Context context) {
         super(context);
     }
 
-    void addCharactor(Charactor charactor){
+    void addCharactor(Peron charactor){
         objects.add(charactor);
 
     }
@@ -34,8 +31,9 @@ public class GameView extends View {
         @Override
         protected void onDraw (Canvas canvas){
 
-for (Charactor charactor: objects){
+for (Peron charactor: objects){
     charactor.draw(canvas);
+    charactor.update();
 }
 
 
@@ -44,7 +42,7 @@ for (Charactor charactor: objects){
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-          for (Charactor charactor: objects) {
+          for (Peron charactor: objects) {
               charactor.touch(event);
           }
 
