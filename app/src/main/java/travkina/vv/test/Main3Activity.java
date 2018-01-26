@@ -21,7 +21,7 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main4);
         MyTask matask = new MyTask();
         matask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         Loader loader = new Loader();
